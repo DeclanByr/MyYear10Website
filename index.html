@@ -2,20 +2,83 @@
 <html lang="en">
 
 <head>
-    <img id="logo" src="https://declanbyr.github.io/MyYear10Website/images/marseybee.gif">
-    <style>
-        body{
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Declan Digitech | Home</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
   margin:0;
   overflow:hidden;
 }
 
 #logo{
-  position:absolute;
+  position:fixed;
   width:150px;
+  z-index:9999;
+  pointer-events:none;
 }
-    </style>
-    <script>
-        let logo = document.getElementById("logo");
+</style>
+
+<script>
+console.log("get out of my code, code theif")
+</script>
+
+</head>
+
+<body>
+
+<!-- Bouncing Image -->
+<img id="logo" src="https://declanbyr.github.io/MyYear10Website/images/marseybee.gif">
+
+<div class="box"><b>
+
+<!-- Hero Section -->
+<section class="hero">
+</section>
+
+<!-- Topic Section -->
+<section class="topic">
+
+<div class="topic-title">
+<h1>Image Editing</h1>
+</div>
+
+<div class="topic-content">
+
+<div class="topic-card">
+<img src="images/placeholder-1024x1024.png" alt="change this too!">
+<h2 class="topic-card-text">Placeholder image</h2>
+</div>
+
+<div class="topic-card">
+<img src="images/placeholder-1024x1024.png" alt="change this too!">
+<h2 class="topic-card-text">Placeholder image</h2>
+</div>
+
+<div class="topic-card">
+<img src="images/placeholder-1024x1024.png" alt="change this too!">
+<h2 class="topic-card-text">Placeholder image</h2>
+</div>
+
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+<p>&copy; 2025 My Showcase Website By Declan</p>
+<br>
+<a href="https://declan459.github.io">Main Website (Better Content + Used More)</a>
+</footer>
+
+</b></div>
+
+<script>
+
+let logo = document.getElementById("logo");
 
 let x = 100;
 let y = 100;
@@ -24,89 +87,32 @@ let dy = 3;
 
 function animate(){
 
-  let screenWidth = window.innerWidth;
-  let screenHeight = window.innerHeight;
+let screenWidth = window.innerWidth;
+let screenHeight = window.innerHeight;
 
-  let logoWidth = logo.offsetWidth;
-  let logoHeight = logo.offsetHeight;
+let logoWidth = logo.offsetWidth;
+let logoHeight = logo.offsetHeight;
 
-  x += dx;
-  y += dy;
+x += dx;
+y += dy;
 
-  if(x + logoWidth >= screenWidth || x <= 0){
-    dx = -dx;
-  }
+if(x + logoWidth >= screenWidth || x <= 0){
+dx = -dx;
+}
 
-  if(y + logoHeight >= screenHeight || y <= 0){
-    dy = -dy;
-  }
+if(y + logoHeight >= screenHeight || y <= 0){
+dy = -dy;
+}
 
-  logo.style.left = x + "px";
-  logo.style.top = y + "px";
+logo.style.left = x + "px";
+logo.style.top = y + "px";
 
-  requestAnimationFrame(animate);
+requestAnimationFrame(animate);
 }
 
 animate();
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Declan Digitech | Home</title>
 
-    <script>
-        console.log("get out of my code, code theif")
-    </script>
-</head>
-<!-- This is the main body of the website- ALL your content goes AFTER the <body> tag and before the </body> tag -->
-<body>
-    
-<div class="box"><b>
+</script>
 
-
-
-    <!-- The Hero Section -------------------------------------------------------------------------------------- -->
-    <section class="hero">
-        
-    </section>
-
-<!-- Topic one ------------------------------------------------------------------------------------------------- -->
-    <!-- The First Topic Section -->
-    <section class="topic">
-        <!-- the topic title a big bar with text in it -->
-        <div class="topic-title">
-            <h1>Image Editing</h1>
-        </div>
-        <!-- now a three column grid of images -->
-        <div class="topic-content">
-            <!-- one "card" which includes an image with a text below it -->
-            <div class="topic-card">
-                <img src="images/placeholder-1024x1024.png" alt="change this too!">
-                <h2 class="topic-card-text">Placeholder image</h2>
-            </div>
-            <div class="topic-card">
-                <img src="images/placeholder-1024x1024.png" alt="change this too!">
-                <h2 class="topic-card-text">Placeholder image</h2>
-            </div>
-            <div class="topic-card">
-                <img src="images/placeholder-1024x1024.png" alt="change this too!">
-                <h2 class="topic-card-text">Placeholder image</h2>
-            </div>
-        </div>
-    </section>
-<!-- End of topic one------------------------------------------------------------------------------------------ -->
-
-<!-- Copy and paste the section from above to make your next section -->
-
-
-
-    <!-- A Simple Website Footer ------------------------------------------------------------------------------ -->
-    <footer class="footer">
-        <p>&copy; 2025 My Showcase Website By Declan</p>
-        <br>
-        <a href="https://declan459.github.io">Main Website (Better Content + Used More)</a>
-    </footer>
-
-<!-- The end of the whole page- no more content after this! -->
 </body>
 </html>
