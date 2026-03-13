@@ -2,6 +2,53 @@
 <html lang="en">
 
 <head>
+    <img id="logo" src="https://declanbyr.github.io/MyYear10Website/images/marseybee.gif">
+    <style>
+        body{
+  margin:0;
+  overflow:hidden;
+}
+
+#logo{
+  position:absolute;
+  width:150px;
+}
+    </style>
+    <script>
+        let logo = document.getElementById("logo");
+
+let x = 100;
+let y = 100;
+let dx = 3;
+let dy = 3;
+
+function animate(){
+
+  let screenWidth = window.innerWidth;
+  let screenHeight = window.innerHeight;
+
+  let logoWidth = logo.offsetWidth;
+  let logoHeight = logo.offsetHeight;
+
+  x += dx;
+  y += dy;
+
+  if(x + logoWidth >= screenWidth || x <= 0){
+    dx = -dx;
+  }
+
+  if(y + logoHeight >= screenHeight || y <= 0){
+    dy = -dy;
+  }
+
+  logo.style.left = x + "px";
+  logo.style.top = y + "px";
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
