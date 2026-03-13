@@ -2,7 +2,62 @@
 <html lang="en">
 
 <head>
-    <img src="https://declanbyr.github.io/MyYear10Website/images/marseybee.gif" class="bounce-image" />
+    <div class="box"><b>
+
+<style>
+
+.box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  margin: 0 auto;
+  overflow: hidden;
+  pointer-events: none; 
+}
+
+.box b {
+  display: block;
+  width: 100px;
+  background-image: url("https://declanbyr.github.io/MyYear10Website/images/marseybee.gif");
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-animation: moveX 5s linear 0s infinite alternate, moveY 6.8s linear 0s infinite alternate;
+  -moz-animation: moveX 5s linear 0s infinite alternate, moveY 6.8s linear 0s infinite alternate;
+  -o-animation: moveX 5s linear 0s infinite alternate, moveY 6.8s linear 0s infinite alternate;
+  animation: moveX 5s linear 0s infinite alternate, moveY 6.8s linear 0s infinite alternate;
+}
+
+-webkit-keyframes moveX {
+  from { left: 0; } to { left: calc(100% - 50px); } /* Adjust the 'to' value to make the element move horizontally */
+}
+@-moz-keyframes moveX {
+  from { left: 0; } to { left: calc(100% - 50px); }
+}
+@-o-keyframes moveX {
+  from { left: 0; } to { left: calc(100% - 50px); }
+}
+@keyframes moveX {
+  from { left: 0; } to { left: calc(100% - 50px); }
+}
+
+@-webkit-keyframes moveY {
+  from { top: 0; } to { top: calc(100% - 50px); } /* Adjust the 'to' value to make the element move vertically */
+}
+@-moz-keyframes moveY {
+  from { top: 0; } to { top: calc(100% - 50px); }
+}
+@-o-keyframes moveY {
+  from { top: 0; } to { top: calc(100% - 50px); }
+}
+@keyframes moveY {
+  from { top: 0; } to { top: calc(100% - 50px); }
+}
+
+</style></b></div>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
