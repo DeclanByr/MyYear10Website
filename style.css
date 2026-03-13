@@ -78,3 +78,20 @@ img {
     text-align: right;
     padding: 3em 3em;
 }
+
+.bounce-image {
+    width: 100px; /* Adjust size */
+    position: fixed; /* Bounces regardless of scroll */
+    animation: bounce-around 5s linear infinite;
+    pointer-events: none; /* Allows clicking through the image */
+    z-index: 999; /* Keeps it on top */
+}
+
+@keyframes bounce-around {
+    0% { top: 0; left: 0; }
+    25% { top: 0; left: calc(100% - 100px); } /* Move right */
+    50% { top: calc(100% - 100px); left: calc(100% - 100px); } /* Move down */
+    75% { top: calc(100% - 100px); left: 0; } /* Move left */
+    100% { top: 0; left: 0; } /* Return to top */
+}
+
