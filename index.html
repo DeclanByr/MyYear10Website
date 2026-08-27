@@ -79,53 +79,5 @@ console.log("get out of my code, code theif")
 </div>
 </section>
 
-<section class="topic">
-
-<div class="topic-title">
-<h1>Idksterling Is Unc</h1>
-</div>
-<video width="320" height="240" controls>
-  <source src="videos/Download.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</section>
-<script>
-
-let logo = document.getElementById("logo");
-
-let x = 100;
-let y = 100;
-let dx = 3;
-let dy = 3;
-
-function animate(){
-
-let screenWidth = window.innerWidth;
-let screenHeight = window.innerHeight;
-
-let logoWidth = logo.offsetWidth;
-let logoHeight = logo.offsetHeight;
-
-x += dx;
-y += dy;
-
-if(x + logoWidth >= screenWidth || x <= 0){
-dx = -dx;
-}
-
-if(y + logoHeight >= screenHeight || y <= 0){
-dy = -dy;
-}
-
-logo.style.left = x + "px";
-logo.style.top = y + "px";
-
-requestAnimationFrame(animate);
-}
-
-animate();
-
-</script>
-
 </body>
 </html>
